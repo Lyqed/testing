@@ -1,6 +1,6 @@
 ---
 - name: Deploy application
-  hosts: your_target_group
+  hosts: all
   become: yes
   vars:
     image_tag: "{{ image_tag | default('latest') }}"
