@@ -7,13 +7,13 @@
   tasks:
     - name: Pull Docker image
       docker_image:
-        name: "motbot/motbotmotbot:{{ image_tag }}"
+        name: "motbot/alpine:{{ image_tag }}"
         source: pull
 
     - name: Run Docker container
       docker_container:
         name: runalpine
-        image: "motbot/motbotmotbot:{{ image_tag }}"
+        image: "motbot/alpine:{{ image_tag }}"
         state: started
         ports:
           - "80:80" 
